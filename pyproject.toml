@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools", "wheel"]  # Packages required to build the project
+build-backend = "setuptools.build_meta"  # Specifies the build backend
+
+[project]
+name = "ml_pipeline_project"  # Name of your project
+version = "0.0.1"  # Version of your project
+authors = [
+  { name = "Ashay", email = "gawali.ashay@gmail.com" },  # Author details
+]
+description = "A small example package"  # Short description of your package
+readme = "README.md"  # Path to your README file
+requires-python = ">=3.12"  # Minimum Python version required
+dependencies = [
+    "numpy",  # Required dependencies
+    "pandas",
+    "scikit-learn",
+    "seaborn",
+    "matplotlib",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+homepage = "https://github.com/gawaliashay/ml_pipeline_project"  # Project homepage URL
+issues = "https://github.com/gawaliashay/ml_pipeline_project.git/issues"  # URL for issues
+
+[tool.setuptools.packages.find]
+# Package discovery settings
+where = ["src"]  # Specify directories to search for packages; adjust if your structure is different
+include = ["ml_pipeline_project.*"]  # Patterns to include specific packages
+exclude = ["tests.*"]  # Patterns to exclude certain packages
+
